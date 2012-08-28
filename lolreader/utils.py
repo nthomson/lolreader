@@ -1,4 +1,4 @@
-def camalcase_to_pythonic(word):
+def camelcase_to_pythonic(word):
     char_list = list(word)
     for counter, c in enumerate(char_list):
         if(c.isupper()):
