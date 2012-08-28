@@ -1,16 +1,8 @@
-import struct, json, sys, urllib2
+import struct
+import json
 from utils import camelcase_to_pythonic
 
-def read_replay_from_file(replay_file):
-    with open(replay_file, 'r') as replay:
-        return LoLReader(replay)
-
-def read_replay_from_url(replay_url):
-    replay = urllib2.urlopen(replay_url)
-
-    return LoLReader(replay)
-
-class LoLReader(object):
+class Game(object):
     # version of LoLReplay client
     version = int()
 
