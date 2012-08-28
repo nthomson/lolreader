@@ -1,5 +1,5 @@
 import struct, json, sys, urllib2
-from utils import camalcase_to_pythonic
+from utils import camelcase_to_pythonic
 
 def read_replay_from_file(replay_file):
     with open(replay_file, 'r') as replay:
@@ -85,4 +85,4 @@ class Player(object):
     def __init__(self, raw_data):
         # so... this is probably a security flaw
         for attribute in raw_data.keys():
-            vars(self)[camalcase_to_pythonic(attribute)] = raw_data[attribute]
+            vars(self)[camelcase_to_pythonic(attribute)] = raw_data[attribute]
