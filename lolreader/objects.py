@@ -27,12 +27,12 @@ class Game(object):
 
         for team in self.teams:
             team.players = [player for player in self.players if player.team == team.number]
-            team.is_winner = team.players[0].won
+            team.won = team.players[0].won
 
 class Team(object):
     number = int()
     players = list()
-    is_won = False
+    won = False
 
     def __init__(self, number):
         self.number = number
