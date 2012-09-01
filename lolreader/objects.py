@@ -38,7 +38,6 @@ class Team(object):
         self.number = number
 
 class Player(object):
-    """
     gold = int()
     deaths = int()
     healed = int()
@@ -72,7 +71,6 @@ class Player(object):
     team = int()
     physical_damage_taken = int()
     time_dead = int()
-    """
 
     def __init__(self, raw_data):
         # so... this is probably a security flaw
