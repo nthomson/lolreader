@@ -17,6 +17,15 @@ class Game(object):
 
     # list of players in the replay
     players = list()
+    
+    # information about the game
+    match_type = int()
+    game_mode = int()
+    queue_type = str()
+    region = str()
+    ranked = False
+    match_length = int()
+    timestamp = int()
 
     def __init__(self, replay):
         self.version, self.meta_length = struct.unpack('ii', replay.readline(8))
@@ -24,6 +33,14 @@ class Game(object):
 
         self.teams = [Team(x) for x in range(1, 3)]
         self.players = [Player(player) for player in self.meta_data['players']] 
+
+        self.match_type = self.meta_data['match_type']
+        self.game_mode = self.meta_deta['game_mode']
+        self.queue_type = self.meta_data['queue_type']
+        self.region = self.meta_data['region']
+        self.ranked = self.meta_data['ranked']
+        self.match_length = self.meta_data['match_length']
+        self.timestamp = self.meta_data['timestamp']
 
         for team in self.teams:
             team.players = [player for player in self.players if player.team == team.number]
