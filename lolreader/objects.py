@@ -71,6 +71,9 @@ class Player(object):
     team = int()
     physical_damage_taken = int()
     time_dead = int()
+    killing_spree = int()
+    turrets = int()
+    barracks = int()
 
     def __init__(self, raw_data):
         # so... this is probably a security flaw
