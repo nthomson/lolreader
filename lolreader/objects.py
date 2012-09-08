@@ -91,6 +91,7 @@ class Player(object):
     killing_spree = int()
     turrets = int()
     barracks = int()
+    largest_multi_kill = int()
 
     def __init__(self, raw_data):
         # so... this is probably a security flaw
