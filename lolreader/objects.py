@@ -34,12 +34,12 @@ class Game(object):
         self.teams = [Team(x) for x in range(1, 3)]
         self.players = [Player(player) for player in self.meta_data['players']] 
 
-        self.match_type = self.meta_data['match_type']
-        self.game_mode = self.meta_deta['game_mode']
-        self.queue_type = self.meta_data['queue_type']
+        self.match_type = self.meta_data['matchType']
+        self.game_mode = self.meta_data['gameMode']
+        self.queue_type = self.meta_data['queueType']
         self.region = self.meta_data['region']
         self.ranked = self.meta_data['ranked']
-        self.match_length = self.meta_data['match_length']
+        self.match_length = self.meta_data['matchLength']
         self.timestamp = self.meta_data['timestamp']
 
         for team in self.teams:
